@@ -8,7 +8,6 @@
   ],
   "main": "src/index.js",
   "dependencies": {
-    "@react-icons/all-files": "^4.1.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-icons": "^4.4.0",
