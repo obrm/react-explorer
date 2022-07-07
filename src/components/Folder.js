@@ -4,20 +4,20 @@ import { FaRegFolderOpen } from "react-icons/fa";
 import { FaRegFileAlt } from "react-icons/fa";
 
 const Folder = ({ explorer }) => {
-  const [expand, setExpand] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   if (explorer.isFolder) {
     return (
       <div>
-        {expand ? <FaRegFolderOpen /> : <FaRegFolder />}{" "}
+        {expanded ? <FaRegFolderOpen /> : <FaRegFolder />}{" "}
         <span
-          onClick={() => setExpand(!expand)}
+          onClick={() => setExpanded(!expanded)}
           style={{ fontWeight: "bold", cursor: "pointer" }}
         >
           {explorer.name}
         </span>
         <br />
-        {expand && (
+        {expanded && (
           <div style={{ paddingLeft: 15 }}>
             {explorer.items.map((exp) => {
               return <Folder explorer={exp} key={exp.name} />;
