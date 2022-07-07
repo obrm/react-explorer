@@ -41,11 +41,7 @@ const explorer = {
             {
               name: "User.js",
               isFolder: false
-            },
-            {
-              name: "Index.js",
-              isFolder: false
-            }
+            },            
           ]
         }
       ]
