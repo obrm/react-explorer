@@ -1,2 +1,2 @@
 # react-explorer
-Simple react explorer display app using recursion
+Simple react explorer-display app using recursion
