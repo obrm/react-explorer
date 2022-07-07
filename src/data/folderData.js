@@ -52,7 +52,7 @@ const explorer = {
     },
 
     {
-      name: "pacage.json",
+      name: "package.json",
       isFolder: false
     }
   ]
