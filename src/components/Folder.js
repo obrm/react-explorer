@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { FaRegFolder } from "react-icons/fa";
+import { FaRegFolderOpen } from "react-icons/fa";
+import { FaRegFileAlt } from "react-icons/fa";
 
 const Folder = ({ explorer }) => {
   const [expand, setExpand] = useState(false);
@@ -6,7 +9,11 @@ const Folder = ({ explorer }) => {
   if (explorer.isFolder) {
     return (
       <div>
-        <span onClick={() => setExpand(!expand)} style={{ fontWeight: "bold" }}>
+        {expand ? <FaRegFolderOpen /> : <FaRegFolder />}{" "}
+        <span
+          onClick={() => setExpand(!expand)}
+          style={{ fontWeight: "bold", cursor: "pointer" }}
+        >
           {explorer.name}
         </span>
         <br />
@@ -22,7 +29,10 @@ const Folder = ({ explorer }) => {
   } else {
     return (
       <div>
-        <span>{explorer.name}</span>
+         <FaRegFileAlt />
+        <span>
+          {explorer.name}
+        </span>
       </div>
     );
   }
